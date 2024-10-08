@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+cd /app
+ansible-rulebook --rulebook webhook-example.yml -i inventory --verbose

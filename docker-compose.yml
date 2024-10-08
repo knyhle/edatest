@@ -1,0 +1,16 @@
+
+services:
+  eda:
+    build:
+      context: .
+    image: test-eda
+    deploy:
+      mode: replicated
+      replicas: 5
+    volumes:
+      - .:/app
+    command: /app/start
+
+networks:
+  default:
+    name: eda-network
